@@ -12,14 +12,15 @@ public class Account {
 	private int accountNumber;
 	private String firstName;
 	private String lastName;
-	private int accountCounter = 0;
+	private static int accountCounter = 0;
 		
-	public Account(int id, int accountNumber, String firstName, String lastName) {
+	public Account(String firstName, String lastName) {
 	
 		this.id = ++accountCounter;
-		this.accountNumber = accountNumber;
+		this.accountNumber = this.id;
 		this.firstName = firstName;
 		this.lastName = lastName;
+	
 	}
 
 	public int getId() {
@@ -53,5 +54,7 @@ public class Account {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	
+	
 	
 }
